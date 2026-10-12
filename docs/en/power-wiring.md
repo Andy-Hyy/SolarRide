@@ -13,4 +13,4 @@
 | 4056-TP OUT | XR2981 IN |
 | XR2981 OUT | ESP32 5 V |
 
-The XR2981 input is the 4056-TP output, not the cell. 5 V was measured before the ESP32 was connected. Cell negative is not tied to the 4056-TP output negative.
+The XR2981 input comes from the 4056-TP output, not from the cell. The output was measured at 5 V before the ESP32 was connected. Cell negative is not tied to the 4056-TP output negative.

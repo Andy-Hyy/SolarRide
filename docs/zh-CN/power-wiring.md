@@ -1,6 +1,6 @@
 # 供电
 
-[English](../en/power-wiring.md) · [首页](../../README.md) · [接线](hardware.md)
+[English](../en/power-wiring.md) · [首页](../../README.zh-CN.md) · [接线](hardware.md)
 
 ![供电连接](../assets/power-wiring.svg)
 
@@ -13,4 +13,4 @@
 | 4056-TP OUT | XR2981 IN |
 | XR2981 OUT | ESP32 的 5 V |
 
-XR2981 的输入是 4056-TP 的输出，不是电池。接 ESP32 之前量过 5 V。电池负极没有和 4056-TP 输出负极短在一起。
+XR2981 的输入接自 4056-TP 的输出，而非电池。接入 ESP32 之前，已测得输出为 5 V。电池负极未与 4056-TP 的输出负极短接。

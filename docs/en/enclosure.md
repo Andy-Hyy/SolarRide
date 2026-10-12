@@ -2,10 +2,10 @@
 
 [中文](../zh-CN/enclosure.md) · [Home](../../README.md)
 
-| Files | What | Printed |
+| Files | Geometry | Printed |
 | --- | --- | --- |
-| `盒盖.stp` + `后盖.stp` | Box and flat rear plate, eight screw posts | Yes |
-| `盒盖A.stp` + `后盖A.stp` | Box and U-shaped frame | No |
+| `盒盖.stp` + `后盖.stp` | Enclosure and flat rear plate, eight screw posts | Printed |
+| `盒盖A.stp` + `后盖A.stp` | Enclosure and U-shaped frame | Not printed |
 
 ![Main box](../assets/enclosure-lid.png)
 
@@ -15,4 +15,4 @@
 
 ![A frame](../assets/enclosure-back-a.png)
 
-The pictures are renders of the STEP files.
+The images above are renders of the STEP models.

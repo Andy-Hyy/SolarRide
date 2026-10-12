@@ -8,8 +8,8 @@
 | Ready | Dim cyan |
 | Turn | Amber blink |
 | Brake | Red |
-| Bad sensor read | Purple |
-| MPU init failed | Red flashing |
-| BLE update | Blue, pulsing |
+| Sensor read failed | Purple |
+| MPU initialization failed | Red flashing |
+| BLE update | Blue pulse |
 
-Ten rear pixels. Normal mode is two red pixels moving out from the center. Left and right are amber in opposite directions. Stop on the remote returns to the normal red pattern. Brake covers that pattern, then the previous mode comes back. The brake pattern toggles every 50 ms.
+The rear strip has 10 pixels. In the normal pattern, two red pixels move outward from the center. Left and right select amber chase patterns in opposite directions. Stop on the remote restores the normal red pattern. A brake warning overrides the current pattern and restores the previous mode when it ends. The brake pattern toggles every 50 ms.
