@@ -1,5 +1,7 @@
 # Notes
 
+[English](../README.md) · [中文](../README.zh-CN.md)
+
 | | English | 中文 |
 | --- | --- | --- |
 | Wiring | [hardware](en/hardware.md) | [硬件](zh-CN/hardware.md) |

@@ -12,4 +12,4 @@ Checked on 2026-10-11: USB upload, hash matched. Remote left, right, and stop. B
 
 Not measured: battery runtime, solar charge current, false flashes on other roads, a full BLE update and recovery.
 
-[Wiring](docs/en/hardware.md) · [中文](docs/zh-CN/hardware.md)
+[Wiring](docs/en/hardware.md) · [中文](README.zh-CN.md)
