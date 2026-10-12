@@ -11,6 +11,6 @@
 
 第三方依赖和厂商资源保留原许可。编译镜像含依赖库代码，分发要求不只限于项目源码的 MIT 声明。详情见[第三方说明](../../THIRD_PARTY_NOTICES.md)及上游条款。本包未提供预编译固件。
 
-项目署名可用“SolarRider Box by Andy-Hyy, https://github.com/Andy-Hyy/SolarRider_box”。署名不代表原作者认可修改版，也不授予商标或器件厂家的权利。
+项目署名可用“SolarRide by Andy-Hyy, https://github.com/Andy-Hyy/SolarRide”。署名不代表原作者认可修改版，也不授予商标或器件厂家的权利。
 
 官方参考包括 [MIT](https://choosealicense.com/licenses/mit/)、[CERN OHL](https://cern-ohl.web.cern.ch/) 和 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。

@@ -4,7 +4,7 @@
 
 ## English
 
-Target repository: https://github.com/Andy-Hyy/SolarRider_box
+Target repository: https://github.com/Andy-Hyy/SolarRide
 
 Upload the **contents of this publication directory** to the repository root. The surrounding collection folder is an archive of original material and includes private device configuration and binaries; it is not the public repository. Review the existing remote files before combining them. These files have been prepared locally, not pushed to GitHub.
 
@@ -21,7 +21,7 @@ The maintainer has approved the three licenses and publication rights. Final att
 
 ### Repository setup
 
-1. Use the existing repository name `SolarRider_box` and enable Issues. Optional topics: `esp32-c3`, `bicycle`, `neopixel`, `solar`, `diy`, `open-hardware`, `ble`.
+1. Use the existing repository name `SolarRide` and enable Issues. Optional topics: `esp32-c3`, `bicycle`, `neopixel`, `solar`, `diy`, `open-hardware`, `ble`.
 2. Suggested description: “DIY bicycle bag lighting with wireless turn signals, IMU braking indication and solar-assisted charging.”
 3. Enable private vulnerability reporting. The supplied workflow compiles and tests source but does not upload firmware to a device or publish binary artifacts.
 4. Run `python3 tools/check_public.py` and `bash tools/test_host.sh`. Build the configured firmware and macOS tools. Inspect a Git diff before committing. Confirm no private config, prebuilt image or raw log is tracked.
@@ -34,7 +34,7 @@ Reference: [GitHub repository practices](https://docs.github.com/en/repositories
 
 **维护者发布指南**
 
-目标仓库：https://github.com/Andy-Hyy/SolarRider_box
+目标仓库：https://github.com/Andy-Hyy/SolarRide
 
 把**本发布目录的内容**放到仓库根目录。外层收集文件夹保留原件，包含现用设备的配对配置和二进制文件，不作为公开仓库整体上传。合并前核对远端已有文件。本次制作仅在本地完成，未推送。
 
@@ -51,7 +51,7 @@ Reference: [GitHub repository practices](https://docs.github.com/en/repositories
 
 ### 仓库设置
 
-1. 使用现有仓库名 `SolarRider_box` 并开启 Issues。可选主题标签为 `esp32-c3`、`bicycle`、`neopixel`、`solar`、`diy`、`open-hardware`、`ble`。
+1. 使用现有仓库名 `SolarRide` 并开启 Issues。可选主题标签为 `esp32-c3`、`bicycle`、`neopixel`、`solar`、`diy`、`open-hardware`、`ble`。
 2. 中文仓库简述可用“开源自行车包灯光小制作”；英文简述见英文部分。
 3. 开启私密漏洞报告。工作流只编译和测试，不烧录设备或发布二进制产物。
 4. 运行发布检查、主机测试，再编译本地配置的固件和 Mac 工具。提交前看差异，确认未跟踪私有配置、镜像和原始日志。

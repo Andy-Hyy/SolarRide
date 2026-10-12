@@ -4,6 +4,10 @@
 
 ## English
 
+### Name — 2026-10-12
+
+- Public materials and the repository now use the name SolarRide. The firmware sketch path, BLE advertisement name `SolarRider`, and existing PCB filenames stay unchanged.
+
 ### V6.5 source package — 2026-10-12
 
 - Organize the existing working V6.5 firmware, PCB sources, enclosure CAD, macOS tools and bilingual maker documentation.
@@ -20,6 +24,10 @@ Retain V6.4 detector fixes and swap remote left/right input mapping to GPIO3 / G
 ## 中文
 
 **更新记录**
+
+### 名称 — 2026-10-12
+
+- 公开资料和仓库名称改为 SolarRide。固件工程路径、蓝牙广播名 `SolarRider` 和已有 PCB 文件名保持不变。
 
 ### V6.5 源码发布包 — 2026-10-12
 

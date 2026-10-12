@@ -1,6 +1,6 @@
-# SolarRider Box
+# SolarRide
 
-[中文](README.zh-CN.md) · [Build guide](docs/en/assembly.md) · [Firmware](docs/en/firmware.md) · [Issues](https://github.com/Andy-Hyy/SolarRider_box/issues)
+[中文](README.zh-CN.md) · [Build guide](docs/en/assembly.md) · [Firmware](docs/en/firmware.md) · [Issues](https://github.com/Andy-Hyy/SolarRide/issues)
 
 A DIY bicycle bag lighting project with wireless turn signals, an IMU-triggered braking light, and a solar-assisted battery power system. An ESP32-C3 drives a 10-pixel rear strip and a status pixel; a handlebar remote selects left, right or normal riding mode.
 

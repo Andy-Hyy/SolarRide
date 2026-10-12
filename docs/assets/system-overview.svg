@@ -2,7 +2,7 @@
 <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#54738a"/></marker></defs>
 <rect width="1120" height="560" rx="20" fill="#f5f8fb"/>
 <style>text{font-family:'Noto Sans CJK SC','PingFang SC','Microsoft YaHei',sans-serif;fill:#18364a}.t{font-size:18px;font-weight:600}.s{font-size:14px;fill:#476175}.wire{fill:none;stroke:#54738a;stroke-width:2;marker-end:url(#a)}</style>
-<text x="40" y="44" font-size="27" font-weight="700">SolarRider Box</text>
+<text x="40" y="44" font-size="27" font-weight="700">SolarRide</text>
 <text x="40" y="72" class="s">Lighting and maintenance links · 灯光与维护链路</text>
 <rect x="40" y="110" width="215" height="80" rx="12" fill="#ffffff" stroke="#c9d7e2"/>
 <text x="58" y="143" class="t">Handlebar remote</text><text x="58" y="169" class="s">车把遥控器 · 433 MHz</text>

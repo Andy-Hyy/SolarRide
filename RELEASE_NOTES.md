@@ -4,7 +4,7 @@
 
 ## English
 
-SolarRider Box combines a bicycle bag with a wireless turn-signal rear strip, an IMU-triggered braking indication and solar-assisted battery power. This source package includes V6.5 firmware, local pairing setup, PCB and STEP enclosure sources, macOS BLE tools, host checks and English/Chinese guides.
+SolarRide combines a bicycle bag with a wireless turn-signal rear strip, an IMU-triggered braking indication and solar-assisted battery power. This source package includes V6.5 firmware, local pairing setup, PCB and STEP enclosure sources, macOS BLE tools, host checks and English/Chinese guides.
 
 The existing device has completed USB programming and basic remote/push-stop checks. Road reliability, charging/runtime measurements and complete real BLE update/recovery are still open. Only the screw-fastened enclosure has been printed. The power module chain and terminal relationships are documented; connector pin order, protection/charging measurements and mechanical replication details still need checking.
 
@@ -14,7 +14,7 @@ Build your own firmware with a private local PIN. Existing device binaries are n
 
 **V6.5 源码发布说明**
 
-SolarRider Box 将车包、无线转向灯、惯性传感器刹车提示和太阳能辅助电源结合。本源码包包含 V6.5 固件、本地配对配置、PCB 与 STEP 外壳、Mac 蓝牙工具、主机检查和中英文指南。
+SolarRide 将车包、无线转向灯、惯性传感器刹车提示和太阳能辅助电源结合。本源码包包含 V6.5 固件、本地配对配置、PCB 与 STEP 外壳、Mac 蓝牙工具、主机检查和中英文指南。
 
 已有实物完成 USB 烧录及基础遥控/推车刹停复测。道路可靠性、充电/续航测量、实际蓝牙升级和恢复全过程仍待完成；只有螺丝款外壳已打印。供电模块和端子关系已写清；接头针脚、保护/充电测量及机械复刻细节仍需核对。
 

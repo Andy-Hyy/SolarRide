@@ -1,8 +1,8 @@
-# SolarRider Box
+# SolarRide
 
-[English](README.md) · [制作指南](docs/zh-CN/assembly.md) · [固件说明](docs/zh-CN/firmware.md) · [问题反馈](https://github.com/Andy-Hyy/SolarRider_box/issues)
+[English](README.md) · [制作指南](docs/zh-CN/assembly.md) · [固件说明](docs/zh-CN/firmware.md) · [问题反馈](https://github.com/Andy-Hyy/SolarRide/issues)
 
-SolarRider Box 是一个可自行制作的自行车包灯光项目，结合无线转向提示、惯性传感器触发的刹车提示灯，以及太阳能辅助充电。ESP32-C3 控制尾部的 10 颗灯珠和一颗状态灯，车把遥控器用于选择左转、右转或常规模式。
+SolarRide 是一个可自行制作的自行车包灯光项目，结合无线转向提示、惯性传感器触发的刹车提示灯，以及太阳能辅助充电。ESP32-C3 控制尾部的 10 颗灯珠和一颗状态灯，车把遥控器用于选择左转、右转或常规模式。
 
 这里提供固件、电路板源文件、外壳模型和 Mac 蓝牙工具，方便你制作自己的版本、了解它的工作方式，并继续改进。
 

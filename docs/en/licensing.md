@@ -11,6 +11,6 @@ The file categories are defined in the root [LICENSE](../../LICENSE), and the co
 
 Third-party dependencies and vendor assets keep their own licenses. In particular, a compiled firmware image contains dependency code, so its distribution obligations are not exhausted by the MIT notice on project source. See [THIRD_PARTY_NOTICES](../../THIRD_PARTY_NOTICES.md) and upstream terms. No precompiled firmware is supplied in this source package.
 
-Original project attribution may use: “SolarRider Box by Andy-Hyy, https://github.com/Andy-Hyy/SolarRider_box”. Attribution does not imply endorsement of a modified build. No trademark rights or component-manufacturer rights are granted by these project licenses.
+Original project attribution may use: “SolarRide by Andy-Hyy, https://github.com/Andy-Hyy/SolarRide”. Attribution does not imply endorsement of a modified build. No trademark rights or component-manufacturer rights are granted by these project licenses.
 
 Official references: [MIT overview](https://choosealicense.com/licenses/mit/), [CERN OHL](https://cern-ohl.web.cern.ch/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
