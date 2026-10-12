@@ -1,6 +1,6 @@
 # 制作与组装
 
-[English](../en/assembly.md) · [首页](../../README.zh-CN.md)
+[English](../en/assembly.md) · [首页](../../README.md)
 
 
 ## 开始前

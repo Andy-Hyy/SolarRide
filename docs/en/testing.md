@@ -18,18 +18,9 @@
 | Solar charging, consumption and runtime | Measurements not supplied |
 | Enclosures | Screw-fastened approach printed; sliding-frame approach not printed |
 
-This evidence describes the existing privately configured device. A rebuilt public image has not been flashed as part of preparing these files. A sanitized summary is included in [device-check-v6.5.json](../../tests/fixtures/device-check-v6.5.json).
+This is what I saw on the box I ride. I did not reflash a new export just to write these notes.
 
-## Run host checks
-
-```sh
-bash tools/test_host.sh
-python3 tools/check_public.py
-```
-
-The regression programs exercise stationary calibration, recovery, sign, short braking, small mounting rotations, synthetic pitch/slope/turning, sensor failures, elapsed-time behavior, and OTA CRC/order/size/timeout/commit cases. These run on a host computer without a bicycle or BLE radio. They do not measure field accuracy, radio compatibility or flash power-loss recovery.
-
-## Practical build check
+## After you build one
 
 Label each action before collecting data: stationary, left, right, stop, forward push/stop, return movement, and mounting movement. Verify physical lamp direction and state release. Record attempted actions separately from detector events. Do not compute an accuracy rate without an exact action count and per-action matching.
 

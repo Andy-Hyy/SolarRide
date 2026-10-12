@@ -1,76 +1,38 @@
 # SolarRide
 
-[中文](README.zh-CN.md) · [Build guide](docs/en/assembly.md) · [Firmware](docs/en/firmware.md) · [Issues](https://github.com/Andy-Hyy/SolarRide/issues)
+I built this for my bike. It sits on the bag. A remote on the handlebar switches the turn lights. An accelerometer turns on a brake warning when I slow down. A small solar panel and a USB-C board charge the battery. The controller is an ESP32-C3.
 
-A DIY bicycle bag lighting project with wireless turn signals, an IMU-triggered braking light, and a solar-assisted battery power system. An ESP32-C3 drives a 10-pixel rear strip and a status pixel; a handlebar remote selects left, right or normal riding mode.
+This is a prototype from high school. It is not a finished product, and it does not replace the bike's own brakes or lights.
 
-The files here are meant for making your own version, understanding how it works, and improving the design. Firmware, PCB sources, enclosure models and small macOS Bluetooth tools are included.
+## What is in this repository
 
-![Bicycle-mounted project](docs/assets/bicycle-mounted.jpg)
+- `firmware/` is the Arduino sketch I am using, V6.5. The folder name has to stay the same or Arduino will not open it. The Bluetooth name is still `SolarRider`.
+- `hardware/pcb/` is the EasyEDA project and the Gerber files for the green board.
+- `hardware/enclosure/` is the STEP files for the box.
+- `docs/` is my notes on wiring, the box, and what I have actually checked. English and Chinese are both there.
 
-![System overview](docs/assets/system-overview.svg)
+The first board was purple. The ground and the LED connector were wrong, and reworking it did not fix it. I redrew the layout and ordered a green board that fits JLCPCB's free small-board size.
 
-## What it does
+## What I have checked
 
-- Red animated rear light in normal mode; amber flowing patterns for left and right turns.
-- An acceleration-based braking indication that temporarily takes priority over the turn pattern.
-- A status pixel for calibration, normal operation, turning and sensor problems.
-- Live USB and BLE telemetry; a BLE firmware update implementation for parked maintenance.
-- A module-based PCB and two enclosure approaches: a screw-fastened version and a sliding-frame version.
+- USB upload
+- Left, right, and stop from the remote
+- The lights, including a brake flash when I push the bike and stop
+- The brake warning after I mounted the box and changed the threshold for that tilt
 
-The current source is V6.5. On the existing build, these checks are done:
+On the bench, the brake light did not match the bike. The box sits at a different angle than it did on the table.
 
-- USB programming
-- Left, right, and stop from the handlebar remote
-- Basic lighting, including a push-and-stop brake flash
-- The brake warning after the box was mounted on the bike and the threshold was recalibrated for that tilt
+## What I have not measured
 
-These are not done:
-
-- Battery runtime
+- How long the battery lasts
 - How much the solar panels actually charge the cell
-- Trigger accuracy, repeated false flashes, or the same check on different roads
-- A complete Bluetooth firmware update and recovery on the device
+- How often the brake light is right, or whether it flashes by mistake on other roads
+- A full Bluetooth firmware update and recovery on the device
 
-One mounted brake check is not a measurement of road durability.
+One ride where the brake light came on is not a test of every road.
 
-Purchase references identify the CN3163 charger, a 3.7 V / 1200 mAh battery, fixed 5 V boost, 1 W / 6 V panels and lighting parts. The complete terminal relationships are recorded in the [power guide](docs/en/power-wiring.md): CN3163 solar charging and 4056-TP USB charging share the cell; 4056-TP output feeds the XR2981 5 V boost.
+## If you build one
 
-This is an auxiliary DIY light. It does not operate the bicycle's brakes and should not replace normal bicycle lights or hand signals. The current brake indication flashes at approximately 10 Hz; review the pattern and mounting for your intended use.
+Open `firmware/SolarRider_BLE_OTA_V6_5_20261011/SolarRider_BLE_OTA_V6_5_20261011.ino`. Copy `OTAPairing.example.h` to `OTAPairing.h`, put in your own six-digit PIN, and delete the `#error` line. Do not commit that file.
 
-## Start here
-
-1. Read the [parts and wiring guide](docs/en/hardware.md) and [assembly guide](docs/en/assembly.md).
-2. Set a private local Bluetooth PIN and [build/upload the firmware](docs/en/firmware.md).
-3. [Calibrate the mounting direction](docs/en/calibration.md), then check the controls and light directions while stationary.
-4. Follow the [operation guide](docs/en/operation.md). Use [Bluetooth tools](docs/en/bluetooth.md) when useful.
-
-## Contents
-
-| Folder | Contents |
-| --- | --- |
-| `firmware/` | V6.5 Arduino sketch and reproducible build profile |
-| `hardware/pcb/` | Native EasyEDA Pro project and existing PCB1 Gerber/drill archive |
-| `hardware/enclosure/` | Original STEP models |
-| `tools/` | Local pairing setup, build and regression scripts |
-| `tools/macos/` | BLE capture and update source tools |
-| `tests/` | Host regression tests and sanitized build-specific data |
-| `docs/en/`, `docs/zh-CN/` | English and Chinese guides |
-
-No private device PINs or prebuilt firmware images are distributed. Build a device-specific image locally.
-
-More reading: [parts reference](docs/en/parts-reference.md), [design](docs/en/design.md), [enclosures](docs/en/enclosure.md), [checks and limitations](docs/en/testing.md), [troubleshooting](docs/en/troubleshooting.md), [roadmap](docs/en/roadmap.md), [licensing](docs/en/licensing.md).
-
-## Contribute
-
-Build reports, clearer instructions, component substitutions and focused improvements are welcome. See [CONTRIBUTING](CONTRIBUTING.md), [community guidelines](CODE_OF_CONDUCT.md) and [security reporting](SECURITY.md). Maintained by [Andy-Hyy](https://github.com/Andy-Hyy).
-
-## Licenses
-
-| Material | License |
-| --- | --- |
-| Original software | [MIT](LICENSES/MIT.txt) |
-| Original circuit and enclosure designs | [CERN-OHL-P-2.0](LICENSES/CERN-OHL-P-2.0.txt) |
-| Documentation, original diagrams and data | [CC BY 4.0](LICENSES/CC-BY-4.0.txt) |
-
-See [LICENSE](LICENSE) for file scope and [third-party notices](THIRD_PARTY_NOTICES.md) for dependency terms.
+More detail is in [docs/en](docs/en/hardware.md) and [docs/zh-CN](docs/zh-CN/hardware.md).

@@ -1,6 +1,6 @@
 # 零件、供电与接线
 
-[English](../en/hardware.md) · [首页](../../README.zh-CN.md)
+[English](../en/hardware.md) · [首页](../../README.md)
 
 
 | 零件 | 数量 | 当前依据 |

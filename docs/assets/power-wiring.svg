@@ -45,4 +45,4 @@
 <text x="992" y="387" class="small">5 V</text>
 <path d="M790,314 H865" class="wire arrow"/>
 <text x="796" y="354" class="small">OUT → IN</text>
-<text x="30" y="559" class="small">Terminal relationships, not plug pin order. 仅表示端子关系，不表示插头针脚顺序。 CC BY 4.0 / Andy-Hyy</text></svg>
+<text x="30" y="559" class="small">Terminal relationships, not plug pin order. 仅表示端子关系，不表示插头针脚顺序。 Andy-Hyy</text></svg>

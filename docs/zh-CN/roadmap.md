@@ -1,6 +1,6 @@
 # 值得继续做的改进
 
-[English](../en/roadmap.md) · [首页](../../README.zh-CN.md)
+[English](../en/roadmap.md) · [首页](../../README.md)
 
 
 下面是尚待完成的工作，不是已实现功能或交付承诺。

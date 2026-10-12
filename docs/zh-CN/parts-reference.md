@@ -1,6 +1,6 @@
 # 零件选型参考
 
-[English](../en/parts-reference.md) · [首页](../../README.zh-CN.md) · [硬件](hardware.md) · [供电接线](power-wiring.md)
+[English](../en/parts-reference.md) · [首页](../../README.md) · [硬件](hardware.md) · [供电接线](power-wiring.md)
 
 参考制作采用下列模块。规格来源为所供采购记录、商品页、源文件和维护者确认的接线；标称值不代表实测续航或性能。替换器件时应匹配电气与机械接口。
 

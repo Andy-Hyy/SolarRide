@@ -1,6 +1,6 @@
 # 安装方向与校准
 
-[English](../en/calibration.md) · [首页](../../README.zh-CN.md)
+[English](../en/calibration.md) · [首页](../../README.md)
 
 
 ## 两种不同的基准
@@ -11,7 +11,7 @@
 const Vec3 forward={-0.5883380f,-0.7899954f,0.1725274f};
 ```
 
-如果你的 MPU6050 朝向不同，不能照搬这个向量。[安装数据](../../tests/fixtures/mount_direction_calibration.json)只是特定实物的示例，不是通用校准值。
+如果你的 MPU6050 朝向不同，不能照搬这个向量。这是我这块盒子装在车上的方向，不是每台都能用的数。
 
 ## 取得自己的方向
 

@@ -1,6 +1,6 @@
 # 供电接线
 
-[English](../en/power-wiring.md) · [首页](../../README.zh-CN.md) · [硬件](hardware.md)
+[English](../en/power-wiring.md) · [首页](../../README.md) · [硬件](hardware.md)
 
 以下为维护者确认的现有实物连接结构，表示端子关系，不表示接头的具体针脚顺序，也不是对充电行为的独立验证。
 

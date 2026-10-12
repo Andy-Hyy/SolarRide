@@ -20,13 +20,12 @@
 | Checks and limits | [Testing](en/testing.md) |
 | Troubleshooting | [Troubleshooting](en/troubleshooting.md) |
 | Roadmap | [Roadmap](en/roadmap.md) |
-| Licenses | [Licensing](en/licensing.md) |
 
 ## 中文
 
 | 主题 | 指南 |
 | --- | --- |
-| 概览 | [README](../README.zh-CN.md) |
+| 概览 | [README](../README.md) |
 | 原理 | [设计](zh-CN/design.md) |
 | 零件接线 | [硬件](zh-CN/hardware.md) |
 | 采购参考 | [采购参考](zh-CN/parts-reference.md) |
@@ -40,4 +39,3 @@
 | 核验限制 | [核验](zh-CN/testing.md) |
 | 排障 | [排障](zh-CN/troubleshooting.md) |
 | 改进 | [改进](zh-CN/roadmap.md) |
-| 许可 | [许可](zh-CN/licensing.md) |

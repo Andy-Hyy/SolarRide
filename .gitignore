@@ -11,5 +11,3 @@ logs/
 *.o
 *.log
 OTAPairing.h
-tools/macos/ble_capture
-tools/macos/ble_update

@@ -1,6 +1,6 @@
 # 排障
 
-[English](../en/troubleshooting.md) · [首页](../../README.zh-CN.md)
+[English](../en/troubleshooting.md) · [首页](../../README.md)
 
 
 | 现象 | 检查方法 |

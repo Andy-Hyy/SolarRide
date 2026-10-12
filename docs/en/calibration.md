@@ -11,7 +11,7 @@ At startup, the firmware learns a stationary gravity reference and gyro bias. It
 const Vec3 forward={-0.5883380f,-0.7899954f,0.1725274f};
 ```
 
-Do not copy this vector blindly to a differently oriented MPU6050. The included [mount data](../../tests/fixtures/mount_direction_calibration.json) is a build-specific example, not a universal calibration.
+Do not copy this vector blindly to a differently oriented MPU6050. It is the direction of the box on my bike, not a value that fits every build.
 
 ## Obtain your direction
 

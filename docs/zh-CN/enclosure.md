@@ -1,6 +1,6 @@
 # 外壳版本
 
-[English](../en/enclosure.md) · [首页](../../README.zh-CN.md)
+[English](../en/enclosure.md) · [首页](../../README.md)
 
 
 ## 已收录的模型

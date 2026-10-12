@@ -1,6 +1,6 @@
 # 使用灯光
 
-[English](../en/operation.md) · [首页](../../README.zh-CN.md)
+[English](../en/operation.md) · [首页](../../README.md)
 
 
 1. 检查车包、电池和线缆是否牢固。接通电源后保持车身直立、静止，等校准完成。

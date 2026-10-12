@@ -11,9 +11,7 @@ The checked profile is Arduino-ESP32 **3.3.12**, board **AirM2M CORE ESP32C3**, 
 
 ## Configure your PIN
 
-From the repository root, run `python3 tools/configure_pairing.py`. This creates a private ignored `OTAPairing.h` beside the sketch. Read it privately when pairing. To choose a PIN, use `--pin` with six digits; use `--force` only when deliberately replacing an existing local configuration. Never commit this file.
-
-For Arduino IDE without the helper, copy `OTAPairing.example.h` as `OTAPairing.h`, set a private six-digit value and remove its `#error` line. The public example deliberately does not build until configured. Changing the PIN requires rebuilding and uploading a new image; the helper does not change any already-flashed device.
+Copy `OTAPairing.example.h` to `OTAPairing.h` in the same folder. Put in your own six-digit PIN and delete the `#error` line. Do not commit `OTAPairing.h`. The example does not build until you do this. Changing the PIN means compiling and uploading again. It does not change a board that already has the old code.
 
 ## Command-line build
 
@@ -24,11 +22,9 @@ arduino-cli core update-index --additional-urls https://espressif.github.io/ardu
 arduino-cli core install esp32:esp32@3.3.12 --additional-urls https://espressif.github.io/arduino-esp32/package_esp32_index.json
 arduino-cli lib update-index
 arduino-cli lib install "Adafruit NeoPixel@1.15.5" "Adafruit MPU6050@2.2.9" "Adafruit BusIO@1.17.4" "Adafruit Unified Sensor@1.1.15"
-python3 tools/configure_pairing.py
-bash tools/build_firmware.sh
 ```
 
-The script only compiles. It writes to ignored `build/firmware/` and does not flash hardware. The configuration helper refuses to overwrite an existing local PIN; skip its invocation if already configured.
+I upload from the Arduino IDE. Copy the pairing header before you compile. These commands only prepare the compiler. They do not flash the board.
 
 ## First USB upload
 

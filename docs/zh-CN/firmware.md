@@ -1,6 +1,6 @@
 # 固件编译与烧录
 
-[English](../en/firmware.md) · [首页](../../README.zh-CN.md)
+[English](../en/firmware.md) · [首页](../../README.md)
 
 
 ## 源码与工具链
@@ -11,9 +11,7 @@
 
 ## 设置私有配对码
 
-在仓库根目录运行 `python3 tools/configure_pairing.py`，它会在程序旁生成被忽略的本地 `OTAPairing.h`。配对时自行查看此文件。也可用 `--pin` 指定六位数字；确需替换已有配置时才用 `--force`。不要提交这个文件。
-
-不使用配置工具时，将 `OTAPairing.example.h` 复制为 `OTAPairing.h`，设置六位私有码并删除 `#error` 行。公开示例刻意要求配置后才能编译。修改配对码需要重新编译和烧录，运行工具不会改变已烧录的设备。
+把 `OTAPairing.example.h` 复制成同目录下的 `OTAPairing.h`，填上自己的六位配对码，删掉 `#error` 行。不要提交 `OTAPairing.h`。示例在改完之前编译不过。改配对码要重新编译并烧录，不会改已经烧进板子里的程序。
 
 ## 命令行编译
 
@@ -24,11 +22,9 @@ arduino-cli core update-index --additional-urls https://espressif.github.io/ardu
 arduino-cli core install esp32:esp32@3.3.12 --additional-urls https://espressif.github.io/arduino-esp32/package_esp32_index.json
 arduino-cli lib update-index
 arduino-cli lib install "Adafruit NeoPixel@1.15.5" "Adafruit MPU6050@2.2.9" "Adafruit BusIO@1.17.4" "Adafruit Unified Sensor@1.1.15"
-python3 tools/configure_pairing.py
-bash tools/build_firmware.sh
 ```
 
-编译脚本只编译，输出位于被忽略的 `build/firmware/`，不向设备烧录。配置工具不会覆盖已有私有码；如已配置，跳过该行。
+我是用 Arduino IDE 上传的。编译前先复制配对码头文件。上面的命令只是准备编译器，不会烧进板子。
 
 ## 首次 USB 烧录
 

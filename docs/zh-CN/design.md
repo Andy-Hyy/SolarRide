@@ -1,6 +1,6 @@
 # 设计与工作原理
 
-[English](../en/design.md) · [首页](../../README.zh-CN.md)
+[English](../en/design.md) · [首页](../../README.md)
 
 
 ## 控制链路
