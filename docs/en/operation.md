@@ -3,11 +3,11 @@
 [中文](../zh-CN/operation.md) · [Home](../../README.md)
 
 
-1. Check that the bag, battery and wiring are secure. Turn on the supply and keep the bicycle upright and still until calibration completes.
-2. Test left and right from the rider's perspective before riding. The stop function returns to the regular red pattern; it does not mechanically stop the bicycle or turn off power.
-3. A detected braking state takes priority over the selected turn pattern. The saved mode resumes afterward. The remote is not linked to the bicycle's mechanical brakes.
-4. If behavior is unexpected, stop in a safe place and inspect the status pixel and telemetry. Turn off the supply before handling wiring.
-5. Perform firmware updates while parked, with stable power and USB recovery accessible.
+1. I check the bag, the cell, and the wires. Then I turn it on and hold the bike still until the status pixel goes cyan.
+2. Before I ride, I try left and right from the saddle. Stop on the remote only puts the lights back on the normal red pattern.
+3. While the brake warning is on, it covers the turn pattern. Afterward the lights go back to the mode I had selected. The remote only changes the lights.
+4. If the lights look wrong, I stop, look at the status pixel, and turn the power off before I touch a wire.
+5. I try a firmware update with the bike parked and the USB port free.
 
 ## Status pixel
 
@@ -17,10 +17,8 @@
 | Normal and ready | Dim cyan | Detector ready, normal mode |
 | Turning | Amber blink | Left or right mode selected |
 | Brake state | Red | Current brake indication active |
-| Runtime invalid sensor | Purple | Read/plausibility failure |
+| Bad sensor read | Purple | The reading failed |
 | MPU initialization failed | Red flashing | Firmware cannot initialize sensor |
 | OTA maintenance | Blue pulsing | Ride lamp suspended during update |
 
-The rear braking pattern toggles every 50 ms, approximately 10 complete flashes per second. Its timing is adjustable in the sketch; changing it requires a rebuild and a visible functional check. Never tune or operate maintenance tools while riding.
-
-No battery percentage display, automatic persistent ride log, phone turn-control app or automatic solar-energy management is implemented by the current firmware. Charging is handled by the fitted hardware modules.
+The rear brake light toggles every 50 ms. To change that I edit the sketch and upload again. I don't do that while riding.

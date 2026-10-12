@@ -7,7 +7,7 @@
 
 Open `firmware/SolarRider_BLE_OTA_V6_5_20261011/SolarRider_BLE_OTA_V6_5_20261011.ino`. Keep its folder name intact so Arduino recognizes the sketch.
 
-The checked profile is Arduino-ESP32 **3.3.12**, board **AirM2M CORE ESP32C3**, FQBN `esp32:esp32:AirM2M_CORE_ESP32C3`, 4 MB flash and default OTA-capable partitions. Use [Espressif's installation instructions](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html). The checked library versions are in [build-profile.json](../../firmware/build-profile.json). BLE/Wire/Update come with the core. Library Manager may install additional declared Adafruit dependencies.
+I compile with Arduino-ESP32 **3.3.12**, board **AirM2M CORE ESP32C3**, FQBN `esp32:esp32:AirM2M_CORE_ESP32C3`, 4 MB flash, and the default OTA partitions. Install notes are on [Espressif's page](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html). Library versions are in [build-profile.json](../../firmware/build-profile.json). BLE, Wire, and Update come with the core.
 
 ## Configure your PIN
 
@@ -24,13 +24,13 @@ arduino-cli lib update-index
 arduino-cli lib install "Adafruit NeoPixel@1.15.5" "Adafruit MPU6050@2.2.9" "Adafruit BusIO@1.17.4" "Adafruit Unified Sensor@1.1.15"
 ```
 
-I upload from the Arduino IDE. Copy the pairing header before you compile. These commands only prepare the compiler. They do not flash the board.
+I upload from the Arduino IDE. Copy the pairing header before compiling. The commands above install the core and the libraries.
 
 ## First USB upload
 
-In Arduino IDE, select the checked board/profile, choose the actual connected port and upload. Open the serial monitor at **115200 baud**. Keep USB recovery accessible while trying your own firmware. A different board, flash layout or library version needs its own checks; do not assume all ESP32-C3 boards have the same pin layout.
+In the Arduino IDE I pick that board, the port the board is on, and upload. The serial monitor is **115200 baud**. I leave the USB port reachable. Other ESP32-C3 boards can use different pins.
 
-The default partition table has two application slots of `0x140000` bytes each plus OTA metadata. Do not choose a No OTA partition scheme if wireless updates are needed. For later BLE updates, select only the generated `.ino.bin` **application** image, never the merged, bootloader or partitions image.
+The default partition table has two application slots of `0x140000` bytes each, plus OTA data. A wireless update needs an OTA partition scheme. The file to send is the `.ino.bin` application image, not the merged, bootloader, or partitions file.
 
 ## Source layout
 
@@ -40,8 +40,6 @@ The default partition table has two application slots of `0x140000` bytes each p
 | `BrakeDetector.h` | Gravity/bias estimation and deceleration indication |
 | `CheckedIMU.h` | Checked 14-byte MPU6050 read at 0x68 |
 | `SolarRiderBLE.h` | BLE telemetry queue and notifications |
-| `SolarRiderOTA.h` | BLE OTA integration, image checks and boot-health hooks |
+| `SolarRiderOTA.h` | BLE update, and the check after the new image boots |
 | `EspBleOTAProtocol.h` | OTA packet order, sector CRC and commit state machine |
-| `OTAPairing.example.h` | Public template for private local configuration |
-
-The historical firmware identifier still contains `TRIAL_V6_5`; it is retained for tool compatibility, not a new maturity claim. The publicly compiled source has the same operational logic as the existing V6.5, with a separately configured PIN. A newly compiled image has its own hash and is not the previously uploaded image.
+| `OTAPairing.example.h` | Copy this, then set your own PIN |

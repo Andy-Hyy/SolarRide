@@ -2,7 +2,7 @@
 
 I built this for my bike. It sits on the bag. A remote on the handlebar switches the turn lights. An accelerometer turns on a brake warning when I slow down. A small solar panel and a USB-C board charge the battery. The controller is an ESP32-C3.
 
-This is a prototype from high school. It is not a finished product, and it does not replace the bike's own brakes or lights.
+This is a high-school prototype.
 
 ## What is in this repository
 
@@ -28,8 +28,6 @@ On the bench, the brake light did not match the bike. The box sits at a differen
 - How much the solar panels actually charge the cell
 - How often the brake light is right, or whether it flashes by mistake on other roads
 - A full Bluetooth firmware update and recovery on the device
-
-One ride where the brake light came on is not a test of every road.
 
 ## If you build one
 

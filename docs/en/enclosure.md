@@ -5,12 +5,12 @@
 
 ## Included geometry
 
-| Files | Geometry interpretation | Physical status |
+| Files | What it is | Printed |
 | --- | --- | --- |
-| `盒盖.stp` + `后盖.stp` | Main box with separate flat rear plate and eight projecting fastening posts: screw-fastened approach | The screw-fastened approach was printed, as confirmed by the maintainer |
-| `盒盖A.stp` + `后盖A.stp` | Main box with separate U-shaped outer frame: sliding-frame approach | Not physically printed |
+| `盒盖.stp` + `后盖.stp` | Main box, separate flat rear plate, eight posts for screws | I printed this pair |
+| `盒盖A.stp` + `后盖A.stp` | Main box and a separate U-shaped frame | I have not printed this pair |
 
-These pairings are inferred from reading and rendering the actual STEP geometry, not from the A suffix alone. The original Chinese filenames are retained. Model geometry is included as design source; exact fasteners, print settings, clearances and fit need to be checked on your own build. STEP files were imported successfully as one solid each.
+I matched the pairs by opening the STEP files. The Chinese filenames stay. Each file imported as one solid.
 
 ### Screw-fastened approach
 
@@ -24,4 +24,4 @@ These pairings are inferred from reading and rendering the actual STEP geometry,
 
 ![A U-shaped frame](../assets/enclosure-back-a.png)
 
-The images are model renders, not photographs of a printed assembly. Import the STEP files into CAD or a compatible slicer; export your own STL/3MF if needed. Avoid rescaling the model to fit a printer without checking module and connector clearances. Weather sealing and material temperature performance are not established by these models.
+The pictures above are renders. I printed the screw-fastened box. I have not printed the sliding frame.

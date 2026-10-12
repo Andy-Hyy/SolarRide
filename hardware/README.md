@@ -6,7 +6,7 @@
 
 See [hardware guide](../docs/en/hardware.md) and [enclosure guide](../docs/en/enclosure.md).
 
-I drew the board and the box. Symbols and footprints that came with EasyEDA are not mine.
+I drew the board and the box.
 
 ## 中文
 
@@ -14,4 +14,4 @@ I drew the board and the box. Symbols and footprints that came with EasyEDA are 
 
 参见[硬件指南](../docs/zh-CN/hardware.md)和[外壳指南](../docs/zh-CN/enclosure.md)。
 
-电路和外壳是我画的。EasyEDA 自带的符号和封装不是我的。
+电路和外壳是我画的。

@@ -3,27 +3,27 @@
 [中文](../zh-CN/hardware.md) · [Home](../../README.md)
 
 
-| Item | Qty | Current basis |
+| Item | Qty | On this build |
 | --- | --- | --- |
-| ESP32-C3 classic development board | 1 | Soldered-header CORE-ESP32 style; AirM2M_CORE_ESP32C3 target, 4 MB flash |
-| GY-521 MPU6050 module | 1 | Downward-soldered headers in the purchase record; I²C address 0x68, AD0 low |
-| KS-59E 433 MHz receiver + matching remote | 1 receiver and 1 remote for a build | Standalone receiver purchase confirmed; left/right/stop logic outputs required |
-| WS2812B rear strip, 5 V | 10 pixels in build | Cut from purchased black coated 144-pixel/m strip; ordered across the rear |
-| WS2812D-F5 status pixel, 5 V | 1 | 5 mm through-hole addressable RGB; separately driven |
-| Carrier PCB | 1 | EasyEDA Pro source included; check the intended board inside the project |
-| Flexible solar panels, nominal 1 W / 6 V | 2 in existing design | Two 1 W / 6 V panels parallel into CN3163; measured operating voltage not supplied |
-| 103040 lithium-polymer cell | 1 | Purchased reference: 3.7 V, 1200 mAh, 4.44 Wh nominal; 4.2 V charge limit; confirm protection and current |
-| CN3163 solar charger | 1 | Confirmed module and terminal relationships; see power wiring guide |
-| 4056-TP Type-C charging-management board | 1 | Completed board with battery/output sockets and switch; listing 1 A / 3.7 V / 4.2 V and protection |
-| XR2981-style DC-DC boost board | 1 | Purchased fixed 5 V output option; verify actual voltage/load capacity |
-| Power switch | As fitted | Verify switch location and current rating in the actual wiring |
-| Enclosure, bag, wiring, connectors and rear-light bracket | As needed | Match the actual modules, enclosure and measured seatpost diameter |
+| ESP32-C3 classic development board | 1 | Headers already soldered. Board target AirM2M_CORE_ESP32C3, 4 MB flash |
+| GY-521 MPU6050 module | 1 | Headers soldered downward. I²C address 0x68, AD0 low |
+| KS-59E 433 MHz receiver + matching remote | 1 receiver and 1 remote | Left, right, and stop outputs |
+| WS2812B rear strip, 5 V | 10 pixels | Cut from a black coated 144-pixel/m strip, laid across the rear |
+| WS2812D-F5 status pixel, 5 V | 1 | 5 mm through-hole addressable RGB, on its own data pin |
+| Carrier PCB | 1 | The EasyEDA file is in `hardware/pcb/`. The photo below is the page with 16 pins on each side |
+| Flexible solar panels, 1 W / 6 V | 2 | In parallel into CN3163. I have not measured the working voltage |
+| 103040 lithium-polymer cell | 1 | Listing: 3.7 V, 1200 mAh, 4.44 Wh. Charge limit 4.2 V |
+| CN3163 solar charger | 1 | See the [power wiring guide](power-wiring.md) |
+| 4056-TP Type-C charging-management board | 1 | Battery socket, output socket, and a switch. Listing: 1 A, 3.7 V / 4.2 V, with protection |
+| XR2981 DC-DC boost board | 1 | Fixed 5 V. I measured the output before I plugged in the ESP32 |
+| Power switch | 1 | On the 4056-TP board |
+| Enclosure, bag, wiring, connectors, rear-light bracket | — | The box, the bag, and the seatpost clamp I used |
 
-The [parts reference](parts-reference.md) explains what is established by purchase records. Components and passives appearing only in the alternative PCB document are not an installed-build BOM.
+What I bought is in the [parts reference](parts-reference.md). The other EasyEDA PCB page lists parts I did not fit.
 
 ## Signal wiring
 
-The following mapping is authoritative for V6.5. It is a logical connection table, not a connector pin-number diagram.
+V6.5 uses these pins.
 
 | Function | GPIO | Connection |
 | --- | --- | --- |
@@ -35,25 +35,23 @@ The following mapping is authoritative for V6.5. It is a logical connection tabl
 | MPU6050 SDA | 4 | I²C SDA |
 | MPU6050 SCL | 5 | I²C SCL |
 
-All signal modules must share ground. The remote inputs are active-high plain `INPUT` pins; verify defined idle levels on the chosen receiver. Do not let them float. Check the receiver's output voltage before connecting it to ESP32-C3 GPIO. A 5 V supply pin is not a 5 V-tolerant GPIO. Use appropriate level translation if required. Refer to the [ESP32-C3 datasheet](https://documentation.espressif.com/ESP32-C3_Datasheet_en.pdf).
+These modules share ground. The remote pins are ordinary inputs, active high, so the receiver sits low when no button is pressed. I measured that output before I connected it. The 5 V pin on the board is power. GPIO is not a 5 V input. Pin limits are in the [ESP32-C3 datasheet](https://documentation.espressif.com/ESP32-C3_Datasheet_en.pdf).
 
-Power the addressable LEDs from a suitable regulated supply and verify the logic-level requirements of the exact strip. The LED strip arrow marks data direction; wire GPIO8 toward `DIN`. The firmware's left/right mapping assumes the existing strip orientation; check it from the rider's perspective after assembly.
+The strip and the status pixel run from the 5 V rail. The arrow on the strip is the data direction. GPIO8 goes to `DIN`. After assembly I checked left and right from the rider's view.
 
 ## Power connections
 
-The [power wiring guide](power-wiring.md) records the confirmed build: two panels in parallel into CN3163 SOLAR; CN3163 BAT and 4056-TP BAT share the cell; 4056-TP OUT feeds XR2981 IN; XR2981 OUT supplies the ESP32 carrier at 5 V. USB-C charges the lithium cell when solar charging is insufficient. Physical pin order, charge current and simultaneous-input behavior still need actual checks.
+The [power wiring guide](power-wiring.md) is the chain on this box: two panels in parallel into CN3163 SOLAR; CN3163 BAT and the 4056-TP battery socket share the cell; 4056-TP OUT goes to XR2981 IN; XR2981 OUT is 5 V for the ESP32 board. I use USB-C when the panels are weak. I have not measured the charge current, or the current with both inputs connected.
 
-Use a compatible 1S lithium cell with a verified protection arrangement, insulated connections and strain relief. The supplied cell reference is 1200 mAh, not the 2000 mAh-or-larger option in the early plan. A supplier claim of protection on the management board must be checked against its actual wiring. Check polarity with a meter; matching connector shells do not guarantee matching polarity. Keep the battery away from screw tips and sharp PCB edges. A damaged or swollen battery should not be used.
+The cell is the 103040, 1200 mAh. An earlier sketch of the project said 2000 mAh. I checked polarity with a meter. The cell stays clear of screw tips and the sharp edges of the board. I do not ride with a swollen cell.
 
 ## PCB source
 
-[SolarRider_Board_20261012.epro2](../../hardware/pcb/SolarRider_Board_20261012.epro2) is a native EasyEDA Pro project. It contains two PCB documents and an older schematic page; the filename date is an export date, not proof that all documents are the same revision. Check the target PCB against the pin mapping and fitted modules before ordering. A [PCB1 fabrication archive](../../hardware/pcb/fabrication/PCB1_20260626_Gerbers.zip) is included. Its outline, top silkscreen and drill files match the corresponding manufacturing input package. It is an existing design export, not a newly DRC-verified fabrication release; inspect it together with the current module wiring.
+[SolarRider_Board_20261012.epro2](../../hardware/pcb/SolarRider_Board_20261012.epro2) is the EasyEDA Pro file. It has two PCB pages and an older schematic. The photo below is the page with 16 pins on each side. The Gerbers I ordered are in [PCB1_20260626_Gerbers.zip](../../hardware/pcb/fabrication/PCB1_20260626_Gerbers.zip).
 
 
 ## Existing assembled build
 
 ![Assembled carrier board](../assets/controller-assembled.jpg)
 
-Project-supplied photograph showing the module-based assembly. It is useful for locating modules but is not a connector-polarity diagram. The photograph resembles the older carrier layout with 16-position headers in the included project; the second PCB document is not confirmed as the fabricated board.
-
-The pictured assembly is historical and illustrates the carrier layout. If a module was replaced later, the maintainer-confirmed current module description takes precedence over the photograph.
+This is the board I assembled. It matches the older layout, 16 pins on each side. I have not had the second PCB page made.

@@ -5,19 +5,15 @@
 
 ## Before starting
 
-Read the hardware guide and the confirmed [power wiring](power-wiring.md) before assembly. Have a multimeter, soldering tools, insulated wire, a USB data cable and a way to current-limit the initial supply. Work on the electronics with the battery disconnected.
+Read the hardware page and the [power wiring](power-wiring.md) first. I use a meter, a soldering iron, wire, and a USB cable. The battery stays unplugged while I solder.
 
-## Assembly order
+## How I put it together
 
-1. Import the EasyEDA Pro project. Identify the intended PCB, check module footprint spacing and compare all connector nets to the firmware mapping. Export fabrication files only after this review.
-2. Solder low-profile passives and connectors, then install the modules. Check electrolytic capacitor orientation and avoid solder bridges. Verify ground and supply continuity with power disconnected.
-3. Test the regulator output without the ESP32 and LEDs connected. Connect the control electronics only once the voltage and polarity are correct. Follow the confirmed power chain for battery/solar connections.
-4. Connect SDA/SCL and the active-high remote outputs. Connect the main strip's `DIN`, supply and ground, plus the separate status pixel. Confirm 10 rear pixels and the actual view direction.
-5. Build and upload the firmware by USB with the rear strip visible. Check startup, status pixel and each remote function before putting the board into the enclosure.
-6. Inspect and slice the chosen STEP models. The screw-fastened design is the version physically printed; the A sliding-frame version has not been printed. Printing material, settings, screw sizes and clearances need to be selected and checked for your printer and build. Start with a fit check before a full enclosure print.
-7. Secure the board and IMU. Keep USB access, insulate solder joints, and route cables without pinching. Secure the battery without compression. Keep the remote and LED wiring clear of wheels, chain and steering.
-8. Mount the bag rigidly enough to preserve sensor orientation. Run the direction calibration and stationary control checks, followed by controlled push/stop checks in a clear area.
-
-Do not assume a printed enclosure or coated LED strip makes the completed device waterproof. Seams, cable exits and module exposure need their own inspection and testing. Do not charge inside a closed enclosure without checking temperature and ventilation.
-
-Record the actual modules, wiring, enclosure files and changes you used. These details help other makers reproduce your build.
+1. I opened the EasyEDA file and used the PCB page with 16 pins on each side. The Gerbers are the June 2026 zip.
+2. I soldered the small parts and the connectors first, then the modules. I checked the electrolytic capacitors and looked for solder bridges. With the battery unplugged, I checked ground and the supply.
+3. I measured the XR2981 before the ESP32 and the LEDs were connected. The cell and the panels follow the power wiring page.
+4. I wired SDA, SCL, and the remote outputs, then the strip `DIN`, power, ground, and the status pixel. The rear strip is 10 pixels.
+5. I uploaded over USB with the strip where I could see it. I tried startup, the status pixel, and the remote before the board went into the box.
+6. I printed the screw-fastened box. The sliding frame is still only the STEP file.
+7. The board and the sensor are fixed in the box. The USB port is still reachable. The wires are not pinched, and the cell is not crushed. The remote cable and the strip stay clear of the wheel, the chain, and the bars.
+8. Mount the bag so the sensor stays put. Calibrate the direction, then try the lights while the bike is still, then a push-and-stop in a clear spot.

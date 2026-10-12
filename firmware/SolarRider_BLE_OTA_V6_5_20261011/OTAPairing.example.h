@@ -1,4 +1,3 @@
-// SPDX-License-Identifier: MIT
 #pragma once
 #include <stdint.h>
 // Copy this file to OTAPairing.h, put in your own six-digit PIN,
