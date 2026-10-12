@@ -1,27 +1,18 @@
-# Enclosure variants
+# Box
 
 [中文](../zh-CN/enclosure.md) · [Home](../../README.md)
 
-
-## Included geometry
-
-| Files | What it is | Printed |
+| Files | What | Printed |
 | --- | --- | --- |
-| `盒盖.stp` + `后盖.stp` | Main box, separate flat rear plate, eight posts for screws | I printed this pair |
-| `盒盖A.stp` + `后盖A.stp` | Main box and a separate U-shaped frame | I have not printed this pair |
-
-I matched the pairs by opening the STEP files. The Chinese filenames stay. Each file imported as one solid.
-
-### Screw-fastened approach
+| `盒盖.stp` + `后盖.stp` | Box and flat rear plate, eight screw posts | Yes |
+| `盒盖A.stp` + `后盖A.stp` | Box and U-shaped frame | No |
 
 ![Main box](../assets/enclosure-lid.png)
 
-![Rear plate with posts](../assets/enclosure-back.png)
+![Rear plate](../assets/enclosure-back.png)
 
-### Sliding-frame approach
+![A box](../assets/enclosure-lid-a.png)
 
-![A main box](../assets/enclosure-lid-a.png)
+![A frame](../assets/enclosure-back-a.png)
 
-![A U-shaped frame](../assets/enclosure-back-a.png)
-
-The pictures above are renders. I printed the screw-fastened box. I have not printed the sliding frame.
+The pictures are renders of the STEP files.

@@ -1,17 +1,7 @@
-# Hardware sources
+# Hardware
 
-[English](#english) · [中文](#中文)
+[Wiring](../docs/en/hardware.md) · [中文](../docs/zh-CN/hardware.md)
 
-## English
+[Box](../docs/en/enclosure.md) · [外壳](../docs/zh-CN/enclosure.md)
 
-See [hardware guide](../docs/en/hardware.md) and [enclosure guide](../docs/en/enclosure.md).
-
-I drew the board and the box.
-
-## 中文
-
-**硬件源文件**
-
-参见[硬件指南](../docs/zh-CN/hardware.md)和[外壳指南](../docs/zh-CN/enclosure.md)。
-
-电路和外壳是我画的。
+PCB file: `pcb/SolarRider_Board_20261012.epro2`

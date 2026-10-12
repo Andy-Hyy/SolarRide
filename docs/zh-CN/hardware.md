@@ -1,57 +1,34 @@
-# 零件、供电与接线
+# 接线
 
-[English](../en/hardware.md) · [首页](../../README.md)
+[English](../en/hardware.md) · [首页](../../README.md) · [供电](power-wiring.md)
 
+| 功能 | GPIO |
+| --- | --- |
+| 尾灯 `DIN` | 8 |
+| 状态灯 `DIN` | 2 |
+| 遥控左转 | 3 |
+| 遥控右转 | 6 |
+| 遥控停止 | 10 |
+| MPU6050 SDA | 4 |
+| MPU6050 SCL | 5 |
 
-| 零件 | 数量 | 我这台上的 |
-| --- | --- | --- |
-| ESP32-C3 经典开发板 | 1 | 排针已经焊好。编译目标 AirM2M_CORE_ESP32C3，4 MB 闪存 |
-| GY-521 MPU6050 模块 | 1 | 排针朝下焊。I²C 地址 0x68，AD0 接低 |
-| KS-59E 433 MHz 接收器与配套遥控器 | 接收器和遥控器各 1 | 左转、右转、停止三路输出 |
-| WS2812B 尾灯带，5 V | 10 颗 | 从黑板滴胶、144 颗/米的灯带上剪下来，横着排在车尾 |
-| WS2812D-F5 状态灯，5 V | 1 颗 | 5 mm 直插可编程 RGB，单独一根数据线 |
-| 载板 PCB | 1 | EasyEDA 文件在 `hardware/pcb/`。下面的照片是每侧 16 针的那一页 |
-| 柔性太阳能板，1 W / 6 V | 2 | 并联进 CN3163。工作时的电压我没量 |
-| 103040 锂聚合物电池 | 1 | 商品写的是 3.7 V、1200 mAh、4.44 Wh，充电到 4.2 V |
-| CN3163 太阳能充电板 | 1 | 接法见[供电接线](power-wiring.md) |
-| 4056-TP Type-C 充电管理板 | 1 | 带电池座、输出座和开关。商品写的是 1 A、3.7 V / 4.2 V、带保护 |
-| XR2981 升压板 | 1 | 固定 5 V。接 ESP32 之前我量过输出 |
-| 电源开关 | 1 | 在 4056-TP 板上 |
-| 外壳、车包、线、接头、尾灯支架 | — | 我用的盒子、车包和座管夹 |
+共地。遥控输入高电平有效。GPIO 不是 5 V 输入。灯带和状态灯用 5 V。
 
-买过的东西在[零件页](parts-reference.md)。EasyEDA 里另一页 PCB 上的零件，我没装。
+| 零件 | 备注 |
+| --- | --- |
+| ESP32-C3 CORE 板 | AirM2M_CORE_ESP32C3，4 MB |
+| GY-521 MPU6050 | 地址 0x68，AD0 接低 |
+| KS-59E 接收器和遥控器 | 433 MHz |
+| WS2812B 灯带 | 10 颗，从 144 颗/米滴胶带上剪的 |
+| WS2812D-F5 | 5 mm。用 DIN、VDD、GND |
+| CN3163 | 光伏输入 |
+| 4056-TP | USB-C 充电，输出接 XR2981 |
+| XR2981 | 固定 5 V，电感标 2R2 |
+| 103040 电池 | 3.7 V，1200 mAh，充到 4.2 V |
+| 太阳能板 | 两块 1 W / 6 V，并联 |
+| 车包 | 商品有 1.5 L 和 2.7 L |
+| 座管夹 | F321，按这辆车的座管 |
 
-## 信号接线
+![焊好的板](../assets/controller-assembled.jpg)
 
-V6.5 用的是这些脚。
-
-| 功能 | GPIO | 连接 |
-| --- | --- | --- |
-| 尾灯带 | 8 | 灯带数据输入 |
-| 状态灯 | 2 | 状态灯数据输入 |
-| 左转输入 | 3 | 接收模块左转输出 |
-| 右转输入 | 6 | 接收模块右转输出 |
-| 停止输入 | 10 | 接收模块停止输出 |
-| MPU6050 SDA | 4 | I²C SDA |
-| MPU6050 SCL | 5 | I²C SCL |
-
-这些模块共地。遥控脚是普通输入，高电平有效，没按键时接收器输出是低电平。我接之前量过。板上的 5 V 脚是供电。GPIO 不是 5 V 输入。脚的电压范围在 [ESP32-C3 数据手册](https://documentation.espressif.com/ESP32-C3_Datasheet_en.pdf)。
-
-灯带和状态灯吃的是这路 5 V。灯带上的箭头是数据方向，GPIO8 接到 `DIN`。装好后我从骑行的角度看过左右。
-
-## 供电接线
-
-[供电接线](power-wiring.md)是这台盒子上的链路：两块板并联进 CN3163 的 SOLAR；CN3163 的 BAT 和 4056-TP 的电池座接同一节电池；4056-TP 的 OUT 接到 XR2981 的 IN；XR2981 的 OUT 给 ESP32 板供 5 V。光伏板不怎么出力时我用 USB-C。充电电流，还有两路同时接着时的电流，我没量。
-
-电池是 103040，1200 mAh。更早的方案里写过 2000 mAh。极性是我用万用表量的。电池躲开螺丝尖和板边。鼓胀的电池我不上车。
-
-## PCB 源文件
-
-[SolarRider_Board_20261012.epro2](../../hardware/pcb/SolarRider_Board_20261012.epro2) 是 EasyEDA Pro 文件。里面有两页 PCB 和一张更早的原理图。下面的照片是每侧 16 针的那一页。我下单用的 Gerber 在 [PCB1_20260626_Gerbers.zip](../../hardware/pcb/fabrication/PCB1_20260626_Gerbers.zip)。
-
-
-## 已有组装实物
-
-![模块化载板实物](../assets/controller-assembled.jpg)
-
-这是我焊好的那块板。对得上每侧 16 针的旧布局。另一页 PCB 我还没做出来。
+照片是每侧 16 针的那一页 PCB。EasyEDA：[SolarRider_Board_20261012.epro2](../../hardware/pcb/SolarRider_Board_20261012.epro2)。Gerber：[PCB1_20260626_Gerbers.zip](../../hardware/pcb/fabrication/PCB1_20260626_Gerbers.zip)。
