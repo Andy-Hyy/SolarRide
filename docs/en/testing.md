@@ -10,9 +10,10 @@
 | Compilation and USB upload | Completed on 2026-10-11, with upload hash verification |
 | Left/right/stop | Confirmed correct on the existing build |
 | Basic push/stop lamp behavior | Aggregate positive feedback; individual actions were not precisely annotated |
+| Mounted brake warning | Checked on the bicycle after the threshold was recalibrated for the installed tilt |
 | Recorded sensor behavior | 8,072 rows over about 180 seconds; all ready, no accumulated read errors or sampling gaps |
 | Recorded brake states | Four detector events, all released; not four ground-truth labeled braking actions |
-| Road reliability / original sustained flashing problem | Not established by these checks |
+| Road durability, false flashes, different roads | Not measured. The mounted check above is not this |
 | Full BLE OTA, interrupted update, rollback | Not physically verified end to end |
 | Solar charging, consumption and runtime | Measurements not supplied |
 | Enclosures | Screw-fastened approach printed; sliding-frame approach not printed |

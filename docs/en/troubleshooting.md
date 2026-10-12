@@ -12,7 +12,7 @@
 | Left/right reversed | Verify rider-view orientation, strip order and receiver mapping; V6.5 uses left GPIO3 / right GPIO6 |
 | Remote input stays active | Check receiver mode, idle levels and active-high output mapping; stop input is GPIO10 |
 | Wrong/missing LED colors | Check strip `DIN`, GRB ordering, data level, common ground and supply under load |
-| Braking indicator stays active | Stop and let a stable reference recover; inspect mounting vector, bag motion and `forward_filtered`; do not assume road behavior is fixed |
+| Braking indicator stays active | Stop and let a stable reference recover; inspect mounting vector, bag motion and `forward_filtered`; one mounted check does not mean the warning is reliable on every road |
 | BLE capture sees no rows | Enable macOS Bluetooth permission, close other connected clients, power only the intended device and wait for complete rows |
 | Update is refused | Use a C3 application image with the OTA marker; confirm parked/still state, free OTA slot, pairing and compatible profile |
 | Update success not confirmed | Keep USB recovery available; inspect identity/boot state and do not infer success from a completed transfer alone |

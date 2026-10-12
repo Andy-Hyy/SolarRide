@@ -18,7 +18,23 @@ The files here are meant for making your own version, understanding how it works
 - Live USB and BLE telemetry; a BLE firmware update implementation for parked maintenance.
 - A module-based PCB and two enclosure approaches: a screw-fastened version and a sliding-frame version.
 
-The current source is V6.5. USB programming, left/right/stop controls and basic push-and-stop lighting have been checked on the existing build. Road behavior, full BLE update/recovery operation, solar charging performance and runtime remain to be characterized. Purchase references identify the CN3163 charger, a 3.7 V / 1200 mAh battery, fixed 5 V boost, 1 W / 6 V panels and lighting parts. The complete terminal relationships are recorded in the [power guide](docs/en/power-wiring.md): CN3163 solar charging and 4056-TP USB charging share the cell; 4056-TP output feeds the XR2981 5 V boost.
+The current source is V6.5. On the existing build, these checks are done:
+
+- USB programming
+- Left, right, and stop from the handlebar remote
+- Basic lighting, including a push-and-stop brake flash
+- The brake warning after the box was mounted on the bike and the threshold was recalibrated for that tilt
+
+These are not done:
+
+- Battery runtime
+- How much the solar panels actually charge the cell
+- Trigger accuracy, repeated false flashes, or the same check on different roads
+- A complete Bluetooth firmware update and recovery on the device
+
+One mounted brake check is not a measurement of road durability.
+
+Purchase references identify the CN3163 charger, a 3.7 V / 1200 mAh battery, fixed 5 V boost, 1 W / 6 V panels and lighting parts. The complete terminal relationships are recorded in the [power guide](docs/en/power-wiring.md): CN3163 solar charging and 4056-TP USB charging share the cell; 4056-TP output feeds the XR2981 5 V boost.
 
 This is an auxiliary DIY light. It does not operate the bicycle's brakes and should not replace normal bicycle lights or hand signals. The current brake indication flashes at approximately 10 Hz; review the pattern and mounting for your intended use.
 
