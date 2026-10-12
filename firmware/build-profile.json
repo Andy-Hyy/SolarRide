@@ -1,0 +1,17 @@
+{
+  "firmware": "SOLAR_RIDER_BLE_OTA_TRIAL_V6_5",
+  "esp32_core": "3.3.12",
+  "fqbn": "esp32:esp32:AirM2M_CORE_ESP32C3",
+  "flash_mb": 4,
+  "partitions": "default",
+  "libraries": {
+    "Adafruit NeoPixel": "1.15.5",
+    "Adafruit MPU6050": "2.2.9",
+    "Adafruit BusIO": "1.17.4",
+    "Adafruit Unified Sensor": "1.1.15"
+  },
+  "local_pairing_header": "OTAPairing.h",
+  "public_prebuilt_firmware_included": false,
+  "note_en": "Historical firmware profile. Public source uses the same behavior with a separately configured local pairing PIN.",
+  "note_zh": "历史固件编译配置。公开代码保留原行为，配对码由本地另行配置。"
+}

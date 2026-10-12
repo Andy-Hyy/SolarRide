@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#54738a"/></marker></defs>
+<rect width="1120" height="560" rx="20" fill="#f5f8fb"/>
+<style>text{font-family:'Noto Sans CJK SC','PingFang SC','Microsoft YaHei',sans-serif;fill:#18364a}.t{font-size:18px;font-weight:600}.s{font-size:14px;fill:#476175}.wire{fill:none;stroke:#54738a;stroke-width:2;marker-end:url(#a)}</style>
+<text x="40" y="44" font-size="27" font-weight="700">SolarRider Box</text>
+<text x="40" y="72" class="s">Lighting and maintenance links · 灯光与维护链路</text>
+<rect x="40" y="110" width="215" height="80" rx="12" fill="#ffffff" stroke="#c9d7e2"/>
+<text x="58" y="143" class="t">Handlebar remote</text><text x="58" y="169" class="s">车把遥控器 · 433 MHz</text>
+<rect x="310" y="110" width="235" height="80" rx="12" fill="#ffffff" stroke="#c9d7e2"/>
+<text x="328" y="143" class="t">Wireless receiver</text><text x="328" y="169" class="s">接收模块 · left / right / stop</text>
+<rect x="620" y="110" width="230" height="80" rx="12" fill="#dcecf4" stroke="#c9d7e2"/>
+<text x="638" y="143" class="t">ESP32-C3</text><text x="638" y="169" class="s">控制与检测 · V6.5</text>
+<rect x="620" y="235" width="230" height="80" rx="12" fill="#ffffff" stroke="#c9d7e2"/>
+<text x="638" y="268" class="t">MPU6050</text><text x="638" y="294" class="s">加速度 / 角速度 · I²C</text>
+<rect x="905" y="110" width="175" height="80" rx="12" fill="#fff0cf" stroke="#c9d7e2"/>
+<text x="923" y="143" class="t">Rear strip</text><text x="923" y="169" class="s">尾灯带 · 10 pixels</text>
+<rect x="905" y="235" width="175" height="80" rx="12" fill="#dff4ee" stroke="#c9d7e2"/>
+<text x="923" y="268" class="t">Status pixel</text><text x="923" y="294" class="s">状态灯 · 1 pixel</text>
+<rect x="40" y="235" width="290" height="80" rx="12" fill="#ffffff" stroke="#c9d7e2"/>
+<text x="58" y="268" class="t">Mac Bluetooth tools</text><text x="58" y="294" class="s">实时数据与停车升级 · BLE</text>
+<path d="M255,150 H310" class="wire"/>
+<path d="M545,150 H620" class="wire"/>
+<path d="M850,150 H905" class="wire"/>
+<path d="M735,235 V190" class="wire"/>
+<path d="M850,165 H878 V275 H905" class="wire"/>
+<path d="M330,275 H560 V175 H620" class="wire"/>
+<rect x="40" y="363" width="1040" height="130" rx="12" fill="#eaf1f6"/>
+<text x="60" y="394" class="t">Solar-assisted power · 太阳能辅助供电</text>
+<text x="60" y="424" class="s">Panels → charging / protection → battery / regulation → electronics</text>
+<text x="60" y="450" class="s">太阳能板 → 充电 / 保护 → 电池 / 稳压 → 控制与灯光</text>
+<text x="60" y="478" class="s">Overview only; terminal connections are in the power guide. 关系概览，端子连接详见供电指南。</text>
+<text x="40" y="532" class="s">Source: V6.5 firmware · 原理示意，不作为电源端子接线图 · CC BY 4.0 / Andy-Hyy</text></svg>

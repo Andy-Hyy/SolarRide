@@ -1,0 +1,20 @@
+name: Improvement / 改进建议
+description: Suggest a useful change or component substitution / 提出改进或器件替换
+title: "[Idea] "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this help with? / 想解决什么问题？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change and alternatives / 建议与可选做法
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Available checks, measurements or constraints / 可用核验、测量与限制

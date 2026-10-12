@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security / 安全报告
+    url: https://github.com/Andy-Hyy/SolarRider_box/security
+    about: Read SECURITY.md before reporting sensitive issues / 敏感问题请先阅读 SECURITY.md

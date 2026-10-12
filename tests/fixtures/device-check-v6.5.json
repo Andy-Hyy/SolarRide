@@ -1,0 +1,32 @@
+{
+  "version": "SOLAR_RIDER_BLE_OTA_TRIAL_V6_5",
+  "core": "3.3.12",
+  "fqbn": "esp32:esp32:AirM2M_CORE_ESP32C3",
+  "compiled": true,
+  "uploaded": true,
+  "upload_hash_verified": true,
+  "device_tests_passed": true,
+  "road_validated": false,
+  "persistent_ride_logger_implemented": false,
+  "functional_verification": "controlled functional smoke test passed: sensor calibration/readout, user-confirmed left/right/stop, aggregate user-confirmed push/brake lamp behavior and recorded release",
+  "device_tests_scope": [
+    "sensor calibrated and no read errors/gaps during recording",
+    "remote left/right/stop user-confirmed correct",
+    "push/brake lamp overall user-confirmed correct; recorded brake flags all release"
+  ],
+  "detector_events_recorded": 4,
+  "all_recorded_brake_flags_released": true,
+  "sensor_read_errors_at_end": 0,
+  "sampling_gaps_at_end": 0,
+  "observed_serial_hz": 44.85218182968927,
+  "exact_push_rounds": null,
+  "per_event_ground_truth": false,
+  "detection_success_rate": null,
+  "moving_startup_device_test_verified": false,
+  "original_road_faults_resolved_in_road_test": false,
+  "date_local": "2026-10-11",
+  "scope_en": "Historical privately configured device, not the newly rebuilt public firmware image.",
+  "scope_zh": "描述已有私有配置设备，不是本次重编译的公开固件镜像。",
+  "real_ble_ota_end_to_end_verified": false,
+  "notes_zh": "基础功能复测通过；四次记录为检测器事件，无逐轮动作标注；不能计算准确率。"
+}
